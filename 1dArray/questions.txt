@@ -1,0 +1,24 @@
+1. element that appears once
+2. right rotate array
+3. sort 0,1,2
+4. find duplicate element(input from 0->n-1)
+5. find majority element
+6. reverse array
+7. find all pairs that sum to x
+8. find missing element from 1 to n
+9. binary searching
+10. merge 2 sorted arrays(final array should also be sorted)
+11. find all unique
+12. find all duplicates
+13. swap alternates
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int* arr = new int[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    delete[] arr;
+}

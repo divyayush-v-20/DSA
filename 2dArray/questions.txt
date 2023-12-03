@@ -1,0 +1,23 @@
+2d array Qs
+1. spiral print
+2. rotate 90 degree
+3. transpose
+4. matrix multiplication
+5. set zeroes
+6. wave print
+7. no of paths
+8. largest row/column
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int rows,cols;
+    cin>>rows>>cols;
+    int arr[rows][cols];
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            cin>>arr[i][j];
+        }
+    }
+    return 0;
+}
