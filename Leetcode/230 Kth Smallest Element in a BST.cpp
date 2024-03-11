@@ -12,20 +12,19 @@
 class Solution {
 public:
 #define tn TreeNode*
-    void fillSet(tn root,set<int>& s){
+    void help(tn root,int k,int& cnt,int& ans){
         if(root==NULL) return;
-        s.insert(root->val);
-        fillSet(root->left,s);
-        fillSet(root->right,s);
+        help(root->left,k,cnt,ans);
+        cnt++;
+        if(cnt==k){
+            ans = root->val;
+        }
+        help(root->right,k,cnt,ans);
     }
     int kthSmallest(TreeNode* root, int k) {
-        if(root==NULL) return -1;
-        set<int> s;
-        fillSet(root,s);
-        for(int i:s){
-            k--;
-            if(k==0) return i;
-        }
-        return -1;
+        int cnt = 0;
+        int ans = -1;
+        help(root,k,cnt,ans);
+        return ans;
     }
 };
